@@ -21,6 +21,10 @@ export class PaymentService {
     },
   ];
 
+  getPayments(): { item: string; value: number; key: string }[] {
+    return this.items;
+  }
+
   handlePaymentCreate(paymentData: PaymentDto) {
     const item = {
       ...paymentData,
