@@ -21,7 +21,7 @@ export class PaymentService {
     },
   ];
 
-  handleUserCreate(paymentData: PaymentDto) {
+  handlePaymentCreate(paymentData: PaymentDto) {
     const item = {
       ...paymentData,
       key: `${parseInt(this.items[this.items.length - 1].key, 10) + 1}`,

@@ -5,10 +5,10 @@ import { PaymentDto } from '../dto/payment.dto';
 
 @Controller()
 export class PaymentController {
-  constructor(private readonly userService: PaymentService) {}
+  constructor(private readonly paymentService: PaymentService) {}
 
   @MessagePattern('create_payment')
-  handleCreateUser(paymentData: PaymentDto) {
-    return this.userService.handleUserCreate(paymentData);
+  handleCreatePayment(paymentData: PaymentDto) {
+    return this.paymentService.handlePaymentCreate(paymentData);
   }
 }
