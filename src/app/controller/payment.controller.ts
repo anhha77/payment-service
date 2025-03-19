@@ -7,12 +7,12 @@ import { PaymentDto } from '../dto/payment.dto';
 export class PaymentController {
   constructor(private readonly paymentService: PaymentService) {}
 
-  @MessagePattern('get_payment')
+  @MessagePattern('get-payment')
   getPayments(): { item: string; value: number; key: string }[] {
     return this.paymentService.getPayments();
   }
 
-  @MessagePattern('create_payment')
+  @MessagePattern('create-payment')
   handleCreatePayment(paymentData: PaymentDto) {
     return this.paymentService.handlePaymentCreate(paymentData);
   }
